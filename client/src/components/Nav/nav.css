@@ -1,0 +1,65 @@
+:root {
+  --primary-color: #2E9CCA;
+  --primary-hover-color: #c2d3d8;
+  --bg-color: rgb(109, 105, 105);
+  --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+
+header {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6rem;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav li {
+  margin: 0 1rem;
+}
+
+Login Button Spacing */
+header nav li:last-child {
+  margin-left: -5px;
+} 
+
+
+header nav li:last-child {
+  margin-left: -5px;
+} 
+
+/* header.inner {
+  background: rgb(109, 105, 105);
+  border-bottom: 4px solid #2E9CCA;
+  position: relative;
+  box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
+} */
+
+
+/* Everything in the search form */
+.search-form > * {
+  border: 0;
+  padding: 0 0 0 10px;
+  background: #fff;
+  line-height: 50px;
+  font-size: 1rem;
+  border-radius: 0;
+  outline: 0;
+}
+
+input[type='search'] {
+  flex-basis: 600px;
+} 
+/* .container {
+  max-width: 960px;
+  padding: 1rem 4rem;
+  margin: auto;
+  overflow: hidden;
+} */
