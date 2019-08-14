@@ -57,9 +57,3 @@ header nav li:last-child {
 input[type='search'] {
   flex-basis: 600px;
 } 
-/* .container {
-  max-width: 960px;
-  padding: 1rem 4rem;
-  margin: auto;
-  overflow: hidden;
-} */
