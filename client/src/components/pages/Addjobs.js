@@ -37,7 +37,7 @@ function AddJobs() {
                             // value={{ salary }} />
                             />
                         </div>
-                        <div class="input-group">
+                        <div className="input-group">
                             <label for="description">Job Description</label>
                             <textarea name="description" id="description" class="input-box"
                                 placeholder="Describe the details of the Job" rows="10">
