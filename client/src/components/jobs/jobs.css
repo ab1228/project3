@@ -1,0 +1,82 @@
+/* Jobs */
+:root {
+  --primary-color: #2E9CCA;
+  --primary-hover-color: #c2d3d8;
+  --bg-color: rgb(109, 105, 105);
+  --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
+}
+.job {
+  background: var(--bg-color);
+  border-bottom: 4px solid var(--primary-color);
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.job ul {
+  list-style: none;
+  display: flex;
+}
+
+.job li {
+  margin-right: 0.5rem;
+  padding: 0.6rem;
+}
+.container {
+  max-width: 960px;
+  /* padding: 1rem 4rem; */
+  margin: auto;
+  overflow: hidden;
+}
+
+  .job .btn {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  color: #333;
+  background: #f4f4f4;
+  
+}
+
+header {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6rem;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav li {
+  margin: 0 1rem;
+}
+
+Login Button Spacing */
+header nav li:last-child {
+  margin-left: -5px;
+} 
+
+
+header nav li:last-child {
+  margin-left: -5px;
+} 
+
+.jobs header.inner {
+  background: rgb(109, 105, 105);
+  border-bottom: 4px solid #2E9CCA;
+  position: relative;
+  box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+

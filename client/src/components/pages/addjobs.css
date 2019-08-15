@@ -1,0 +1,73 @@
+
+
+/* Form */
+.form-wrap {
+  margin: auto;
+  background: var(--bg-color);
+  color: #fff;
+  padding: 1rem 3rem 3rem;
+  margin-top: 3rem;
+  border-bottom: 4px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
+
+.form-wrap.reg-form,
+.form-wrap.login-form {
+  width: 60%;
+}
+
+.form-wrap h1,
+.form-wrap h2,
+.form-wrap p {
+  text-align: center;
+}
+
+.form-wrap .btn {
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input-box {
+  padding: 0.5rem;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.btn {
+  color: #fff;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  transition: all 0.7s;
+}
+
+.btn:hover {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #fff;
+}
+
+.btn-reverse {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-reverse:hover {
+  background: var(--primary-hover-color);
+  border: 1px solid var(--primary-hover-color);
+}
+
+.addjobs header.inner {
+  background: rgb(109, 105, 105);
+  border-bottom: 4px solid #2E9CCA;
+  position: relative;
+  box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
+}
