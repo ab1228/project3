@@ -3,7 +3,9 @@ const express = require('express');
 const path = require('path');
 
 const Sequelize = require("sequelize");
+const routes = require("./routes/jobs")
 
+const PORT = process.env.PORT || 3070;
 // Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
 const sequelize = new Sequelize("jobs_db", "root", "password", {
     host: "localhost",
@@ -28,14 +30,13 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// app.get("/", (req, res) => res.render('', { layout: "" }));
+// app.get("/", (req, res) => res.render(''));
 
 
 
 //ROUTES
-// app.use("", require("));
+app.use(routes);
 
-const PORT = process.env.PORT || 3050;
 
 var db = require("./models/index.js");
 db.sequelize.sync().then(function () {

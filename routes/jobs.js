@@ -4,13 +4,14 @@ var db = require("../models");
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 // GET JOBS
+//*express   '/'
 router.get("/", (req, res) =>
     db.Job.findAll()
-        .then(dbjobs => res.render('jobs', {
-            dbjobs
-        }))
+        .then(dbjobs => res.json(dbjobs)
+        )
         .catch(err => console.log(err))
 );
+//*react     '/add'
 //DISPLAY ADD JOB
 router.get("/add", (req, res) => res.render("add"));
 
@@ -34,7 +35,7 @@ router.post("/add", (req, res) => {
 
     //CHECK FOR ERROS
     if (errors.length > 0) {
-        res.render("", {
+        res.render("add", {
             errors,
             title,
             technologies,
@@ -60,12 +61,14 @@ router.post("/add", (req, res) => {
             contactEmail
 
         })
-            .then(dbjobs => res.redirect(""))
+            .then(dbjobs => res.json(dbjobs))
             .catch(err => console.log(err));
 
     }
 
 });
+
+//*react /search
 
 //SEARCH FOR JOB
 router.get('/search', (req, res) => {
@@ -73,9 +76,10 @@ router.get('/search', (req, res) => {
     const { term } = req.query;
 
     db.Job.findAll({ where: { title: { [Op.like]: "%" + term + "%" } } })
-        .then(dbjobs => res.json("", { dbjobs }))
+        .then(dbjobs => res.render(dbjobs))
         .catch(error => console.log(error));
 
 });
 
 module.exports = router;
+

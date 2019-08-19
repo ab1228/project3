@@ -4,15 +4,12 @@ import "./searchbar.css";
 
 
 
-class Searchbar extends React.Component() {
+class Searchbar extends React.Component {
     state = {
         searchterm: ""
     }
-    searchJob = (event) => {
+    // searchJob = (event) => {
 
-
-
-    }
     render() {
         return (
             <div className="searchbar">
@@ -32,5 +29,8 @@ class Searchbar extends React.Component() {
         );
     }
 }
+
+
+
 
 export default Searchbar;
