@@ -15,10 +15,10 @@ class Searchbar extends React.Component {
             <div className="searchbar">
                 <Nav />
 
-                <section id="search" class="search-wrap">
+                <section id="search" className="search-wrap">
                     <h1>Find your coding job today</h1>
-                    <div action="/jobs/search" class="search-form">
-                        <i class="fas fa-search"></i>
+                    <div action="/jobs/search" className="search-form">
+                        <i className="fas fa-search"></i>
                         <input type="search" name="term" placeholder="Javascript, Java, Html, etc..." />
                         <input type="submit" value="Search" onClick={this.search} />
                     </div>

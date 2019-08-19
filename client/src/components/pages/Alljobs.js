@@ -8,15 +8,17 @@ import { List } from './List'
 
 class AllJobs extends React.Component {
     state = {
-        jobs: []
+        jobs: [],
+        message: "No jobs available"
     }
 
-    componentDidMount() {
-        this.getJobList();
+    componentDidMount = function () {
+        //this.getJobList();
     }
 
     getJobList = () => {
         API.getJobs().then((res) => {
+            console.log(res.data)
             this.setState({ jobs: res.data })
         }).catch((err) => { console.log(err) })
 
@@ -42,29 +44,24 @@ class AllJobs extends React.Component {
                 <Nav />
                 <Jobs />
                 <Card title="Results">
-                    {this.state.jobs.length ? (
-                        <List>
-                            {this.state.jobs.map(job => (
-                                <Job
-                                    key={job.id}
-                                    title={job.title}
-                                    subtitle={job.technologies}
-                                    contactEmail={job.contactEmail}
-                                    description={job.description}
-                                    Button={() => (
-                                        <button
-                                        // onClick={() => this.handleBookSave(job.id)}
-                                        // className="btn btn-primary ml-2"
-                                        >
-                                            Save
-                        </button>
-                                    )}
-                                />
-                            ))}
-                        </List>
-                    ) : (
-                            <h2 className="text-center">{this.state.message}</h2>
-                        )}
+                    {this.state.jobs.map(job =>
+                        <Job
+                            key={job.id}
+                            title={job.title}
+                            subtitle={job.technologies}
+                            contactEmail={job.contactEmail}
+                            description={job.description}
+                            Button={() => (
+                                <button
+                                // onClick={() => this.handleBookSave(job.id)}
+                                // className="btn btn-primary ml-2"
+                                >
+                                    Save
+                                        </button>
+                            )}
+                        />
+                    )}
+                    <h2 className="text-center">{this.state.message}</h2>
                 </Card>
             </div>
         )
