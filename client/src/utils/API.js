@@ -5,7 +5,7 @@ export default {
     getJobs: function () {
         return axios.get("/");
     },
-    getBookByQuery: function (q) {
+    getJobsByQuery: function (q) {
         return axios.get("/search", { params: { q: "title:" + q } });
     },
     // Saves an book to the database

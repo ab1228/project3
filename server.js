@@ -5,7 +5,7 @@ const path = require('path');
 const Sequelize = require("sequelize");
 const routes = require("./routes/jobs")
 
-const PORT = process.env.PORT || 3070;
+const PORT = process.env.PORT || 4000;
 // Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
 const sequelize = new Sequelize("jobs_db", "root", "password", {
     host: "localhost",

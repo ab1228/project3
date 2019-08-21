@@ -6,18 +6,18 @@ function Jobs() {
     return (
         <div>
 
-            <section id="jobs" class="container">
+            <section id="jobs" className="container">
                 <h1>All Jobs</h1>
 
                 {/* {{#each dbjobs}} */}
-                <div class="job">
+                <div className="job">
                     {/* <h3>{{ title }}</h3>
                 <p>{{ description }}</p> */}
                     <ul>
                         <li>Salary: </li>
-                        <li><a href="#" class="btn btn-reverse">Apply Now</a></li>
+                        <li><a className="btn btn-reverse">Apply Now</a></li>
                     </ul>
-                    <div class="tech">
+                    <div className="tech">
                         <small>Technologies: <span></span></small>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ import "./nav.css";
 function Nav() {
     return (
         <div>
-            <header class="inner">
+            <header className="inner">
                 <h2><Link to="/">
                     TechJobFinder
                 </Link></h2>
